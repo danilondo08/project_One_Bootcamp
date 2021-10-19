@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectOneBootcamp</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+   
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="<%=root_path%>">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="<%=static_pages_basics_path%>"><i class="fas fa-cogs"></i> Basics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=static_pages_ruby_path%>"><i class="far fa-gem"></i> Ruby</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=static_pages_git_path%>"><i class="fab fa-github"></i> Git</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <label class="mr-sm-2" style="color:rgba(255, 255, 255, 0.486)">Hora: <%= Time.now.strftime("%H:%M %p") %></label>
+        <label style="color:rgba(255, 255, 255, 0.486)" class="disabled">Fecha: <%= Time.now.strftime("%m/%d/%Y") %></label>
+      </div>
+    </div> 
+  </nav>
     <%= yield %>
   </body>
 </html>
+

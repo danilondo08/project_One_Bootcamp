@@ -1,0 +1,66 @@
+<% provide(:title, "Git") %>
+<div class="table-responsive">
+    <table class="table table-sm" >
+        <thead class="table-light"> 
+            <tr>
+                <th>Caso</th>
+                <th>Comando</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="align-middle">
+                <th style="width:500px">Inicialización de un repositorio de git nuevo en una aplicación existente </th>
+                <td class="align-top">git init</td>
+            </tr>
+            <tr class="align-middle" >
+                <th>Creación de un branch nuevo</th>
+                <td class="align-top">git checkout -b <"BranchName"> </td>
+            </tr>
+            <tr class="align-middle">
+                <th >Realizar un commit incluyendo todos los cambios actuales</th>
+                <td class="align-top" style="text-align:justify">git commit -am <"Message"> 
+                </td>  
+            </tr>
+            <tr>
+                <th >¿Cómo enviar el código al repositorio remoto?</th>
+                <td class="align-top" >git push origin <"BranchName"></td>
+            </tr>
+            <tr>
+                <th>¿Cómo configurar el origen del repositorio remoto para evitar escribirlo
+                siempre cada vez que se hace un push o un pull?</th>
+                <td class="align-top">git push -u origin <"BranchName"></td>
+            </tr>
+            <tr>
+                <th >Diferencia entre un reset y revert</th>
+                <td class="align-top" style="text-align:justify">git reset: Elimina todos los cambios posteriores al commit restaurado, altera el historial de versiones y sólo puede ser empleado si no se han publicado los cambios en el repositorio remoto. Se puede utilizar de la siguente manera:
+                <ul>
+                    <li>git reset --soft: Elimina todo el historial y los registros de git, guarda los cambios que tenga en Staging Area, de modo que sea posible aplicar los últimos cambios o actualizaciones a un nuevo commit.</li> 
+                    <li>git reset --hard: Elimina  toda la información del historial de versiones (commits y Staging Area) posteriores a la versión restaurada.</li>
+                    <li>git reset HEAD: Remover archivos del Staging Area.</li>
+                </ul>
+                git revert: Deshace un commit creando uno nuevo, siempre y cuando los cambios hayan sido confirmados y subidos al repositorio remoto, cabe resaltar que no se sobrescribe el historial de versiones.
+
+                </td>
+            </tr>
+            <tr>
+                <th>Además de cambiar de ramas,¿para qué más se puede utilizar el comando git
+                checkout?</th>
+                <td class="align-top">git checkout <"IDcommit">, es utilizado para deshacer cambios, restaurar versiones o simplemente visualizar cambios. Este comando permite mover el puntero de referencia HEAD hacia un commit en específico. </td>
+            </tr>
+            <tr>
+                <th>¿Cómo puede ver los commits que se han realizado en el proyecto?</th>
+                <td class="align-top">git log</td>
+            </tr>
+            <tr>
+                <th>¿He modificado dos archivos y quiero hacer un commit por cada uno de ellos,
+                ¿cómo lo puedo hacer?</th>
+                <td>
+                    <ol>
+                        <li>git add <"SpecificFile1">, git commit -m "ModifiedFile1", git push</li>
+                        <li>git add <"SpecificFile2">, git commit -m "ModifiedFile2", git push</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

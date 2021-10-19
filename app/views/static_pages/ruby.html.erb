@@ -1,0 +1,70 @@
+<% provide(:title, "Ruby") %>
+<div class="table-responsive">
+    <table class="table table-sm" >
+        <thead class="table-light"> 
+            <tr>
+                <th>Caso</th>
+                <th style="text-align:center">Descripción</th>
+                <th style="text-align:center" >Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="align-middle">
+                <th style="width:220px">Interpolación de strings</th>
+                <td class="align-top" style="width:500px; text-align:justify">La interpolación es una forma de concatenar cadenas o strings, de manera que evita utilizar el  operador “+”, y en lugar de ello, utiliza la siguiente sintaxis: #{}, esto indica que todo lo que se encuentre dentro de las llaves o corchetes, ruby sustituirá las variables o expresiones contenidas. Cabe aclarar que funciona, siempre y cuando se utilice comillas dobles.</td>
+                <td  style="text-align:center">
+                    <img  style="height:100px; width:350px" src="<%=asset_path'interpolation.PNG'%>" alt="">
+                </td>
+            </tr>
+            <tr class="align-middle" style="height:200px">
+                <th>¿Cómo se declara un array y cómo se adiciona un elemento al final del array?</th>
+                <td class="align-top" style="text-align:justify">* Un array se puede declarar de diversas formas, en la imagen encontramos 3 formas posibles.
+                <br>
+                <br>
+                * Para insertar un elemento podemos utilizar push indicando el elemento que queremos agregar, o insert  indicando la posición y elemento que se quiere añadir al arreglo.
+                </td>
+                <td  style="text-align:center">
+                    <img style="height:200px; width:350px" src="<%=asset_path'arrays.PNG'%>" alt="">
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <th >¿Cómo se itera un array utilizando el comando each?</th>
+                <td class="align-top" style="text-align:justify"> Each method, permite iterar sobre una lista de elementos y operarlos de forma individual. Toma como argumentos un bloque ({}) y un elemento(|n|).
+                </td>  
+                <td  style="text-align:center">
+                    <img  style="height:200px; width:350px" src="<%=asset_path'each.PNG'%>" alt="">
+                </td>
+            </tr>
+            <tr>
+                <th >¿Cómo se declara un hash?</th>
+                <td class="align-top" >Hashes son colecciones de datos, donde se puede apreciar que cada valor esta asociado a una llave. Es posible declararlos de la siguiente manera:</td>
+                <td  style="text-align:center">
+                    <img  style="height:150px; width:350px" src="<%=asset_path'hashes.PNG'%>" alt="">
+                </td>
+            </tr>
+            <tr>
+                <th>¿Qué es un block en ruby? De un ejemplo de cómo utilizarlo.</th>
+                <td class="align-top" >Son fragmentos de código contenidos dentro de llaves (bloques de una sola línea) o entre "do..end" (bloques de múltiples líneas), se podría decir que los bloques cumplen la misma función que los métodos, reciben entradas en forma de argumentos y retornan un valor, únicamente difieren en que no poseen un nombre ni son propios de un objeto</td>
+                <td  style="text-align:center">
+                    <img  style="height:150px; width:350px" src="<%=asset_path'block.PNG'%>" alt="">
+                </td>
+            </tr>
+            <tr>
+                <th >¿Cuál es la convención en Ruby a la hora de nombrar variables?</th>
+                <td class="align-top" style="text-align:justify" colspan="2">Ruby implementa snake_case para nombrar variables
+                </td>
+            </tr>
+            <tr>
+                <th>¿Qué son attr_reader, attr_writer y attr_accesor?, ¿Para qué sirven?</th>
+                <td class="align-top" colspan="2">
+                <ul>
+                <li>attr_accessor: es una forma de acceder a los atributos de la clase y modificarlos de una forma más sencilla, sin necesidad de crear métodos, ya que este comando implementa métodos de lectura ("READER") y escritura ("WRITER").</li>
+                <li>attr_reader: crea un método de lectura ("READER") , sin embargo únicamente es posible leer el valor pero no modificarlo. </li>
+                <li>attr_writer: crea un método de escritura ("WRITER"), sin embargo únicamente es posible modificar el valor pero no leerlo.</li>
+                </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

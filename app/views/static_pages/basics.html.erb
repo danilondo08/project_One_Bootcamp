@@ -1,0 +1,50 @@
+<% provide(:title, "Basics") %>
+<div class="table-responsive">
+    <table class="table table-sm" >
+        <thead class="table-light"> 
+            <tr>
+                <th></th>
+                <th>Definición</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="align-middle">
+                <th style="width:250px">¿Qué es un resource en el contexto de un aplicación Web REST en ruby on Rails? </th>
+                <td class="align-top" colspan="2">Es la manera en que se modelan los componentes de una aplicación.</td>
+            </tr>
+            <tr class="align-middle" >
+                <th>¿Qué puede hacerse con un resource?</th>
+                <td class="align-top" colspan="2">Un resource se puede ver como un objeto que puede ser creado, leído, actualizado y eliminado.</td>
+            </tr>
+            <tr class="align-middle">
+                <th rowspan="4">¿Qué es RESTFUL routing?</th>
+                <td class="align-top" style="text-align:justify" colspan="2">Básicamente se  encarga de definir las rutas, a partir de mapear acciones CRUD (Create, read, update,delete)  y  métodos HTTP(POST, GET,PATCH,DELETE).  
+                El enrutamiento hacia un sitio web depende  tanto del método HTTP como de la URL,  es decir,  cuando se genera una petición HTTP, el sitio web donde se aloja la aplicación identifica el tipo de petición HTTP y la URL, con el fin  de conectar una acción al controlador correspondiente, se ejecuta la acción y envía una respuesta de regreso al cliente.
+                </td>  
+            </tr>
+            <tr>
+                <th >¿Cuántas acciones básicas tiene esta filosofía?</th>
+                <td class="align-top" >Cuenta con 7 acciones básicas.</td>
+            </tr>
+             <tr>
+                <th>¿Cuáles son?</th>
+                <td class="align-top" style="text-align:left">index, show, new, create, edit, update y destroy.</td>
+            </tr>
+            <tr>
+                <th>¿Cuáles verbos HTTP se utilizan en cada una de ellas?</th>
+                <td>
+                    <ul>
+                        <li>HTTP REQUEST-GET: Action-index</li>
+                        <li>HTTP REQUEST-GET: Action-show</li>
+                        <li>HTTP REQUEST-GET: Action-new</li>
+                        <li>HTTP REQUEST-POST: Action-create</li>
+                        <li>HTTP REQUEST-GET: Action-edit</li>
+                        <li>HTTP REQUEST-PATCH: Action-update</li>
+                        <li>HTTP REQUEST-DELETE: Action-destroy</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
